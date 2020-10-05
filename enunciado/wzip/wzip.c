@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 int main(int argc, char *argv[])
 {
@@ -17,7 +15,7 @@ int main(int argc, char *argv[])
         if (currentFile == NULL)
         {
             printf("wzip: cannot open file\n");
-            exit(1);
+            return 1;
         }
         char currentCharIterator = fgetc(currentFile);
         while ((currentCharFile = fgetc(currentFile)) != EOF)
@@ -35,10 +33,10 @@ int main(int argc, char *argv[])
                 contador = 1;
             }
         }
-        fclose(currentFile);
         fwrite(&contador, sizeof(int), 1, stdout);
         fwrite(&currentCharIterator, sizeof(char), 1, stdout);
         //printf("%i%c", contador, currentCharIterator);
+        fclose(currentFile);
     }
     return 0;
 }
