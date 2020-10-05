@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
     FILE *currentFile = fopen(argv[i], "r");
     if (currentFile == NULL)
     {
-        printf("wzip: cannot open file\n");
+        printf("wunzip: cannot open file\n");
         return 1;
     }
     while (argc !=0)
@@ -31,22 +31,6 @@ int main(int argc, char *argv[])
         }
         argc = argc - 1;
     }
-
-    //FILE *fp;
-    //char c;
-    //int n;
-
-    //n = 0;
-    //while (--argc > 0) {
-    //if ((fp = fopen(*++argv, "r")) == NULL)
-    //return 1;
-    //while (fread(&n, INTLEN, 1, fp)) {
-    //fread(&c, ASCLEN, 1, fp);
-    //while (n-- > 0)
-    //printf("%c", c);
-    //}
-    //fclose(fp);
-    //}
     fclose(currentFile);
     }
     return 0;
