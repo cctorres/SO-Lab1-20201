@@ -1,0 +1,7 @@
+Linea 1 wgrep
+linea 2 wcat
+linea 3 wgrep   
+linea 4 wcat 
+linea 5 wzip 
+linea 6 wunzip 
+linea 7 wgrep
