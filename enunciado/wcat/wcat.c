@@ -5,8 +5,7 @@ int main(int argc, char *argv[])
     if (argc == 1)
     {
         printf("wcat: file1 [file2 ...]\n");
-        //return 0;
-        return 1;
+        return 0;
     }
     for (int i = 1; i < argc; i++)
     {
@@ -25,6 +24,5 @@ int main(int argc, char *argv[])
           
         fclose(currentFile);
     }
-    printf("\n");
     return 0;
 }
