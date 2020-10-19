@@ -6,7 +6,7 @@ int main(int argc, char *argv[])
     if (argc == 1)
     {
         printf("wgrep: searchterm [file ...]\n");
-        return 0;
+        return 1;
     }
     char *stringWord = argv[1];
 
